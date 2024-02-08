@@ -1,12 +1,22 @@
-const startOptions = [
+import { ReactNode } from "react";
+
+export interface ScriptOption {label: string, toId: string}
+
+export interface ScriptItem {
+    id: string,
+    content: ReactNode,
+    options: ScriptOption[],
+}
+
+const startOptions: ScriptOption[] = [
     {label: "No", toId: "explain"},
     {label: "Yes (super excited/down/enthusiastic)", toId: "enthYes"},
-    {label: "Yes (unenthusiastic/no further comments)", toId: "enthYes"},
+    {label: "Yes (unenthusiastic/no further comments)", toId: "unenthYes"},
     {label: "Yes (explicitly anti-divestment/zionist)", toId: "hangup"},
     {label: "If person says that now is not a good time", toId: "askTime"},
 ];
 
-const scriptItems = [
+const scriptItems: ScriptItem[] = [
     {
         id: "start",
         content: <p><i>Start here. Do you know the person you’re calling?</i></p>,
@@ -31,7 +41,7 @@ const scriptItems = [
         options: startOptions,
     },
     {
-        id: "unethYes",
+        id: "unenthYes",
         content: <p>What are your thoughts?</p>,
         options: [
             {label: "Support divestment", toId: "enthYes"},
@@ -61,7 +71,7 @@ const scriptItems = [
     {
         id: "questions",
         content: <p>What questions or concerns do you have about the questions on the referendum? <i>(Answer their questions)</i></p>,
-        option: [
+        options: [
             {label: "(Done)", toId: "commit"},
         ],
     },
