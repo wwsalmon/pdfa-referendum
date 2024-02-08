@@ -2,11 +2,11 @@ import { useState } from "react";
 import scriptItems from "../script/script";
 import classNames from "classnames";
 
-export default function QuestionBlock({id}: {id: string}) {
+export default function QuestionBlock({id, reset}: {id: string, reset?: () => any}) {
     const question = scriptItems.find(d => d.id === id);
     // console.log(question);
     const [childId, setChildId] = useState<string>("");
-    const [iter, setIter] = useState<number>(0);
+    const resetFunc = (id === "start") ? () => setChildId("") : reset;
     
     return question ? (
         <>
@@ -17,12 +17,16 @@ export default function QuestionBlock({id}: {id: string}) {
                 {question.options.map(d => (
                     <button className={classNames("px-4 py-2 bg-black rounded hover:shadow-lg hover:scale-105 transition-scale", (childId && childId !== d.toId) && "opacity-25")} onClick={() => {
                         setChildId(d.toId);
-                        setIter(prev => prev + 1);
                     }} key={d.toId}>{d.label}</button>
                 ))}
+                {!question.options.length && (
+                    <button className="px-4 py-2 bg-black rounded hover:shadow-lg hover:scale-105 transition-scale" onClick={resetFunc}>
+                        Reset (go back to beginning of script)
+                    </button>
+                )}
             </div>
             {childId && (
-                <QuestionBlock id={childId} key={childId}/>
+                <QuestionBlock id={childId} key={childId} reset={resetFunc}/>
             )}
         </>
     ) : (

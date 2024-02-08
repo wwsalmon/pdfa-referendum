@@ -1,5 +1,5 @@
 import { EB_Garamond } from "next/font/google";
-import QuestionBlock from "../components/questionBlock";
+import QuestionBlock from "../components/QuestionBlock";
 import { useState } from "react";
 
 export default function Home() {
