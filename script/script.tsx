@@ -28,7 +28,7 @@ const scriptItems: ScriptItem[] = [
     {
         id: "startCold",
         content: <p>Hi! My name is —--- and I am a —---- College student calling because I wanted to talk to you about the upcoming ASPC referendum on divestment. <b>Have you heard about it?</b></p>,
-        options: startOptions,
+        options: [...startOptions, {label: "No answer", toId: "noAnswerCold"}],
     },
     {
         id: "askTime",
@@ -38,7 +38,7 @@ const scriptItems: ScriptItem[] = [
     {
         id: "startWarm",
         content: <p>Hi! Have you heard about the upcoming ASPC referendum on divestment?</p>,
-        options: startOptions,
+        options: [...startOptions, {label: "No answer", toId: "noAnswerWarm"}],
     },
     {
         id: "unenthYes",
@@ -70,7 +70,26 @@ const scriptItems: ScriptItem[] = [
     },
     {
         id: "questions",
-        content: <p>What questions or concerns do you have about the questions on the referendum? <i>(Answer their questions)</i></p>,
+        content: <>
+            <p>What questions or concerns do you have about the questions on the referendum? <i>(Answer their questions)</i></p>
+            <ul>
+                <li>How did you get my number?
+                    <ul>
+                        <li>Someone gave me your number but I can't remember who - if it is ok, I can keep contacting this number for campaign stuff, or if you feel uncomfortable with that, is there somewhere else I can reach you?</li>
+                    </ul>
+                </li>
+                <li>Will the school be able to see how I voted on the referendum?
+                    <ul>
+                        <li>While this is a possibility, we are confident that we will be turning out enough people to vote yes on the referendum that this will not put you in any danger. We have safety in numbers!</li>
+                    </ul>
+                </li>
+                <li>Who are you working with?
+                    <ul>
+                        <li>34 orgs have endorsed this referendum. I'm part of [xxx] org volunteering to support with outreach.</li>
+                    </ul>
+                </li>
+            </ul>
+        </>,
         options: [
             {label: "(Done)", toId: "commit"},
         ],
@@ -122,6 +141,16 @@ const scriptItems: ScriptItem[] = [
             {label: "Hesitant (Keep trying to convince)", toId: "motivation"},
             {label: "Hostile (give up)", toId: "hangup"},
         ]
+    },
+    {
+        id: "noAnswerWarm",
+        content: <p>Hi! This is _____. Would you be able to give me a call sometime soon? It is time sensitive – is there a moment you will be free today and can call me back? Thank you so much :)</p>,
+        options: [],
+    },
+    {
+        id: "noAnswerCold",
+        content: <p>Hi! My name is ____ and I am a [school] student! Would you be able to give me a call sometime soon? It is time sensitive – is there a moment you will be free today and can call me back? Thank you so much :)</p>,
+        options: [],
     },
 ];
 
