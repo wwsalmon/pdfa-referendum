@@ -55,11 +55,11 @@ const scriptItems: ScriptItem[] = [
             <p>That’s great to hear! There are going to be 5 questions about divestment and disclosure on the form, and it’s super important that as many people vote YES on all five questions so that Pomona administration sees that divestment is what the student body supports.</p>
             <p>These are the questions you will be asked:</p>
             <ol>
-                <li>Should the Investments Committee on the Board of Trustees disclose Pomona College’s investments in weapons manufacturers?</li>
-                <li>Should Pomona College divest completely from all weapons manufacturers?</li>
-                <li>Given the definitions above, should Pomona College cease all academic support, as outlined by USACBI, for the apartheid system within the State of Israel?</li>
-                <li>Should the Investments Committee on the Board of Trustees disclose Pomona College’s investments in all companies aiding the ongoing apartheid system within the State of Israel?</li>
-                <li>Should Pomona College divest from all companies aiding the ongoing apartheid system within the State of Israel?</li>
+                <li>The first question will be asking whether Pomona should disclose the details of its investments.</li>
+                <li>The second question will be asking whether Pomona divest from all weapons manufacturers.</li>
+                <li>The third question will be asking whether Pomona should cut academic ties, including study abroad programs, with the State of israel following USACBI outlines.</li>
+                <li>The fourth question will be asking whether Pomona should disclose their investments with all companies complicit in the ongoing apartheid system in israel.</li>
+                <li>The last question will be asking weather Pomona should divest from all companies complicit in the ongoing apartheid system in israel.</li>
             </ol>
             <p><b>Do these all make sense?</b></p>
         </>,
