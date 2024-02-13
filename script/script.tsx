@@ -59,7 +59,7 @@ const scriptItems: ScriptItem[] = [
                 <li>The second question will be asking whether Pomona divest from all weapons manufacturers.</li>
                 <li>The third question will be asking whether Pomona should cut academic ties, including study abroad programs, with the State of israel following USACBI outlines.</li>
                 <li>The fourth question will be asking whether Pomona should disclose their investments with all companies complicit in the ongoing apartheid system in israel.</li>
-                <li>The last question will be asking weather Pomona should divest from all companies complicit in the ongoing apartheid system in israel.</li>
+                <li>The last question will be asking whether Pomona should divest from all companies complicit in the ongoing apartheid system in israel.</li>
             </ol>
             <p><b>Do these all make sense?</b></p>
         </>,
